@@ -1,4 +1,4 @@
-#file-manager { width: 100%; float: left; height: 60%; margin: 0; padding: 15px; overflow: scroll; }
+#file-manager { width: 100%; float: left; height: 60%; margin: 0; padding: 15px; overflow: auto; }
 
 #file-manager ul { display: block; margin: 0; padding: 0; }
 #file-manager li { display: block; margin: 0; padding: 2px 0; list-style: none; }
