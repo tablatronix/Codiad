@@ -112,7 +112,7 @@
     
     /* Right Sidebar */   
     #sb-right .sidebar-handle { float: left; }
-    .sb-right-content { width: 190px; float: left; height: 100%; padding: 15px; overflow: scroll; }
+    .sb-right-content { width: 190px; float: left; height: 100%; padding: 15px; overflow: auto; }
     #sb-right a { display: block; min-width: 100%; cursor: pointer; padding: 3px 5px 7px 5px; border-radius: 5px; }
     #sb-right a span { padding-right: 8px; }
     #sb-right a:hover { background-color: #333; }
