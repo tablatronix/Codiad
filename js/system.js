@@ -144,7 +144,7 @@ var sidebars = {
         });
         
         // Left Column Slider
-         $("#sb-left").hover(function() {
+         $("#sb-left").hoverIntent(function() {
             var timeout_r = $(this).data("timeout_r");
             if(timeout_r){ clearTimeout(timeout_r); }
             $('#editor-region').animate({'margin-left':'300px','width':($('body').outerWidth()-310)+'px'},300,'easeOutQuart');
@@ -159,7 +159,7 @@ var sidebars = {
          }); 
          
          // Right Column Slider
-         $("#sb-right").hover(function() {
+         $("#sb-right").hoverIntent(function() {
             var timeout_r = $(this).data("timeout_r");
             if(timeout_r){ clearTimeout(timeout_r); }
             $('#editor-region').animate({'margin-right':'200px'},300,'easeOutQuart');
