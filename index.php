@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/screen.css">
+    <link rel="stylesheet" href="components/editor/codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="components/editor/codemirror/theme/monokai.css">
 </head>
 
 <body>
@@ -16,6 +18,7 @@
     <script src="js/jquery-ui-1.8.23.custom.min.js"></script>
     <script src="js/jquery.css3.min.js"></script>
     <script src="js/jquery.easing.js"></script>
+    <script src="js/jquery.hoverIntent.minified.js"></script>
     <script src="js/system.js"></script>
     
     <div id="message"></div>
@@ -180,6 +183,13 @@
     ?>
     <!-- ACE -->
     <script src="components/editor/ace-editor/ace.js"></script>
+    <script src="components/editor/codemirror/lib/codemirror.js"></script>
+    <script src="components/editor/codemirror/mode/javascript/javascript.js"></script>
+    <script src="components/editor/codemirror/mode/php/php.js"></script>
+    <script src="components/editor/codemirror/mode/xml/xml.js"></script>
+    <script src="components/editor/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="components/editor/codemirror/mode/css/css.js"></script>
+    <script src="components/editor/codemirror/mode/clike/clike.js"></script>
 
 </body>
 </html>
