@@ -36,7 +36,7 @@ var filemanager = {
     //////////////////////////////////////////////////////////////////
     
     node_listener : function(){
-        $('#file-manager a').live('dblclick',function(){ // Open or Expand
+        $('#file-manager a').live('click',function(){ // Open or Expand
             if($(this).hasClass('directory')){
                 filemanager.index($(this).attr('data-path'));
             }else{
@@ -170,7 +170,7 @@ var filemanager = {
         node.addClass('loading');
         $.get(this.controller+'?action=index&path='+path,function(data){
             if(node.hasClass('open')){
-                node.parent('li').children('ul').slideUp(300,function(){ 
+                node.parent('li').children('ul').slideUp(100,function(){ 
                     $(this).remove(); 
                     node.removeClass('open');
                 });
@@ -190,7 +190,7 @@ var filemanager = {
                         });
                         appendage += '</ul>';
                         $(appendage).insertAfter(node);
-                        node.siblings('ul').slideDown(300);   
+                        node.siblings('ul').slideDown(100);   
                     }
                 }
             }
