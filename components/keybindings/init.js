@@ -13,7 +13,6 @@ $.ctrl = function(key, callback, args) {
     $(document).keydown(function(e) {
         if(!args) args=[];
         if(e.keyCode == key && e.ctrlKey) {
-            console.log(e);
             callback.apply(this, args);
             return false;
         }
