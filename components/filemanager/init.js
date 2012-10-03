@@ -167,14 +167,17 @@ var filemanager = {
 
     index : function(path){
         node = $('#file-manager a[data-path="'+path+'"]');
+
+        if(node.hasClass('open')){
+            node.parent('li').children('ul').slideUp(100,function(){ 
+                $(this).remove(); 
+                node.removeClass('open');
+            });
+            return;
+        }
+            
         node.addClass('loading');
         $.get(this.controller+'?action=index&path='+path,function(data){
-            if(node.hasClass('open')){
-                node.parent('li').children('ul').slideUp(100,function(){ 
-                    $(this).remove(); 
-                    node.removeClass('open');
-                });
-            }else{
                 node.addClass('open');
                 objects_response = jsend.parse(data);
                 if(objects_response!='error'){
@@ -193,7 +196,6 @@ var filemanager = {
                         node.siblings('ul').slideDown(100);   
                     }
                 }
-            }
             node.removeClass('loading');
         });
         
