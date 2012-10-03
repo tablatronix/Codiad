@@ -71,8 +71,23 @@ switch($_GET['action']){
     <?php
     break;
     
+    //////////////////////////////////////////////////////////////////
+    // Search
+    //////////////////////////////////////////////////////////////////
+    case 'search':
+    ?>
+    <input type="hidden" name="path" value="<?php echo($_GET['path']); ?>">    
+    <label>Search Files:</label>
+    <input type="text" name="search_string" autofocus="autofocus">
+    <pre id="filemanager-search-results"></pre>
+    <div id="filemanager-search-processing"></div>
+    <button class="btn-left">Search</button><button class="btn-right" onclick="modal.unload();return false;">Cancel</button>
+    <?php
+    break;
+    
 }
 
 ?>
+</form>
     
     
