@@ -1,4 +1,4 @@
-#file-manager { width: 100%; float: left; height: 60%; margin: 0; padding: 15px; overflow: auto; }
+#file-manager { width: 100%; float: left; height: 60%; margin: 0; padding: 15px; overflow: scroll; }
 
 #file-manager ul { display: block; margin: 0; padding: 0; }
 #file-manager li { display: block; margin: 0; padding: 2px 0; list-style: none; }
@@ -52,7 +52,6 @@
 #file-manager .directory { background-image: url(images/directory.png); }
 #file-manager .directory.open { background-image: url(images/directory_open.png); }
 #file-manager .file { background-image: url(images/file.png); }
-#file-manager .loading { background-image: url(images/spinner.gif); }
 
 /* EXTENSIONS */
 #file-manager .ext-htaccess { background-image: url(images/config.png); }
@@ -117,3 +116,5 @@
 #file-manager .ext-xls { background-image: url(images/xls.png); }
 #file-manager .ext-xml { background-image: url(images/code.png); }
 #file-manager .ext-zip { background-image: url(images/zip.png); }
+
+#file-manager .loading { background-image: url(images/spinner.gif)}
