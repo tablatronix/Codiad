@@ -12,14 +12,12 @@ $.ctrl = function(key, callback, args) {
     var isCtrl = false;
     $(document).keydown(function(e) {
         if(!args) args=[];
-        if(e.ctrlKey) isCtrl = true;
-        if(e.keyCode == key && isCtrl) {
+        if(e.keyCode == key && e.ctrlKey) {
+            console.log(e);
             callback.apply(this, args);
-            isCtrl = false;
             return false;
         }
     }).keyup(function(e) {
-        if(e.ctrlKey) isCtrl = false;
     });        
 };
 
