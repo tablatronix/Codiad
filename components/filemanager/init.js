@@ -265,11 +265,14 @@ var filemanager = {
     //////////////////////////////////////////////////////////////////
 
     open_file: function(path) {
+        node = $('#file-manager a[data-path="'+path+'"]');
+        node.addClass('loading');        
         var ext = filemanager.get_extension(path);
         if ($.inArray(ext, filemanager.no_open) < 0) {
             $.get(this.controller + '?action=open&path=' + path, function(data) {
                 open_response = jsend.parse(data);
                 if (open_response != 'error') {
+                    node.removeClass('loading');                                        
                     editor.open(path, open_response.content);
                 }
             });
